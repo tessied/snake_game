@@ -21,8 +21,10 @@ game_over = False
 while not game_over:
     screen.update()
     time.sleep(0.1)
-    for index in snake:
-        index.forward(20)
+
+    for index in range(len(snake) - 1, 0, -1):
+        snake[index].goto(snake[index - 1].pos())
+    snake[0].forward(20)
 
 
 
