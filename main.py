@@ -25,5 +25,8 @@ while not game_over:
 
     snake.move()
 
+    # Detect food
+    if snake.head.distance(food) < 15:
+        food.change_location()
 
 screen.exitonclick()
