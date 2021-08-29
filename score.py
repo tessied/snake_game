@@ -22,6 +22,7 @@ class Score(Turtle):
 
     def end_game(self):
         self.home()
+        self.color("red")
         self.write("Game Over", align="center", font=("Courier", 18, "normal"))
 
 
