@@ -9,10 +9,16 @@ class Snake:
         self.create()
         self.head = self.snake_body[0]
 
-
     def create(self):
         for index in range(3):
             self.add_length((0 - index * 20, 0))
+
+    def reset(self):
+        for segment in self.snake_body:
+            segment.goto(5000, 5000)
+        self.snake_body.clear()
+        self.create()
+        self.head = self.snake_body[0]
 
     def move(self):
         for index in range(len(self.snake_body) - 1, 0, -1):
