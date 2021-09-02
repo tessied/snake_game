@@ -10,7 +10,8 @@ class Score(Turtle):
         self.hideturtle()
         self.goto(0, 270)
         self.points = 0
-        self.high_score = 0
+        with open("data.txt") as file:
+            self.high_score = int(file.read())
         self.scoreboard()
 
     def scoreboard(self):
@@ -24,6 +25,8 @@ class Score(Turtle):
     def reset(self):
         if self.points > self.high_score:
             self.high_score = self.points
+            with open("data.txt", mode="w") as file:
+                file.write(str(self.high_score))
         self.points = 0
         self.scoreboard()
 
