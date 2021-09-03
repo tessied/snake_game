@@ -1,3 +1,5 @@
+# A module to generate the food particle for the snake
+
 from turtle import Turtle
 import random
 

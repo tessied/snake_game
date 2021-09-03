@@ -1,3 +1,5 @@
+# A module to position, move, and extend the snake
+
 from turtle import Turtle
 MOVE_STEPS = 20
 
@@ -50,7 +52,3 @@ class Snake:
     def right(self):
         if self.head.heading != 180:
             self.head.setheading(0)
-
-
-
-

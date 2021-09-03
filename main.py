@@ -1,3 +1,7 @@
+# This is the main.py file for the snake game
+# This project was inspired by the course 100 Days of Code
+# Run this file to play the game
+
 from turtle import Screen
 from snake import Snake
 from food import Food
@@ -44,6 +48,5 @@ while not game_over:
         if snake.head.distance(piece) < 10:
             score.reset()
             snake.reset()
-
 
 screen.exitonclick()

@@ -1,3 +1,6 @@
+# A module to keep track of the user's score
+# Reads from and writes to a text file with the highest score
+
 from turtle import Turtle
 
 
@@ -16,7 +19,8 @@ class Score(Turtle):
 
     def scoreboard(self):
         self.clear()
-        self.write(f"Score: {self.points} High Score: {self.high_score}", align="center", font=("Courier", 18, "normal"))
+        self.write(f"Score: {self.points} High Score: {self.high_score}",
+                   align="center", font=("Courier", 18, "normal"))
 
     def increase(self):
         self.points += 1
@@ -29,6 +33,3 @@ class Score(Turtle):
                 file.write(str(self.high_score))
         self.points = 0
         self.scoreboard()
-
-
-
